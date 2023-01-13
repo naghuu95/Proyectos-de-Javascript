@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - NINETY 90</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <header class="container py-5">
+    <div class="row">
+        <div class="col-md-10">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <div class="container-fluid ">
+                  <a class="navbar-brand logo" href="../index.html">NINETY 90</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav  ">
+                      <li class="nav-item mx-4">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Productos</a>
+                      </li>
+                      <li class="nav-item mx-4">
+                        <a class="nav-link" href="#">Locales</a>
+                      </li>
+                      <li class="nav-item mx-4">
+                        <a class="nav-link" href="#">Contacto</a>
+                      </li>
+                      <li class="nav-item mx-4">
+                        <a class="nav-link" href="#">Nosotros</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </nav>
+        </div>
+        <div class="col-md-2 d-flex align-items-center justify-content-end">
+            <a href="#" id="boton_carrito" title="Ver Carrito"></a>
+        </div>
+    </div>
+</header>
+    <main class="container py-3">
+        <h1 id="titulo_encabezado" class="text-center display-6 py-4">Productos Seleccionados</h1>
+        <div id="productos_seleccionados" class="row"></div>
+    </main>
+    <footer class="container py-3">
+      <hr>
+      <div class="row">
+        <div class="col-md-8 d-flex align-items-center">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link text-secondary" href="#">Política de Privacidad</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary" href="#">Defensa del Consumidor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary" href="#">Protección de datos personales</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary" href="#">Contacto</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 d-flex align-items-center justify-content-end">
+            <span class="text-secondary"> NINETY 90</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="../js/productos.js"></script>
+    <script src="../js/funciones.js"></script>
+    <script src="../js/main_carrito.js"></script>
+</body>
+</html>
