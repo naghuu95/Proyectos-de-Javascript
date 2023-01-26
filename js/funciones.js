@@ -1,7 +1,9 @@
+
+//funciones para guardar productos al carrito al localStorage 
 const guardarProductosCarrito = (productos) => {
     localStorage.setItem("carrito", JSON.stringify(productos));
 }
-
+//funcion para cargar productos al carrito desde local
 const cargarProductosCarrito = () => {
     return JSON.parse(localStorage.getItem("carrito")) || [];
 }
@@ -21,7 +23,7 @@ const estaEnElCarrito = (id) => {
 
     return productos_carrito.some(item => item.id === id);
 }
-
+//funcion para agregar un producto al carrito
 const agregarAlCarrito = (id) => {
     const productos = cargarProductosLS();
     const productos_carrito = cargarProductosCarrito();
@@ -38,7 +40,7 @@ const agregarAlCarrito = (id) => {
     guardarProductosCarrito(productos_carrito);
     renderBotonCarrito();
 }
-
+//funcion para eliminar producto del carrito
 const eliminarProducto = (id) => {
     const productos_carrito = cargarProductosCarrito();
     const productos = productos_carrito.filter(item => item.id !== id);
@@ -46,25 +48,25 @@ const eliminarProducto = (id) => {
     renderProductosCarrito();
     renderBotonCarrito();
 }
-
+//funcion para vaciar por completo el carrito
 const vaciarCarrito = () => {
     localStorage.removeItem("carrito");
     renderProductosCarrito();
     renderBotonCarrito();
 }
-
+//funcion para el total del carrito
 const totalCarrito = () => {
     const productos_carrito = cargarProductosCarrito();
 
     return productos_carrito.reduce((total, item) => total += item.cantidad, 0);
 }
-
+//funcion para sumar los productos del carrito
 const sumaCarrito = () => {
     const productos_carrito = cargarProductosCarrito();
 
     return productos_carrito.reduce((total, item) => total += item.cantidad * item.precio, 0);
 }
-
+//funcion para renderizar el boton del carrito en el html
 const renderBotonCarrito = () => {
     let salida = `<button type="button" class="btn btn-dark position-relative">
       <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
